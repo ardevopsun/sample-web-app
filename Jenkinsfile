@@ -27,7 +27,7 @@ pipeline {
                 echo 'Deploying application...'
                 // Copy files to the web server using SCP (ensure SSH access is configured)
                 sh '''
-                scp -i /path/to/your-key.pem -r * ubuntu@your-web-server-ip:/var/www/html/
+                scp -i /home/ec2-user/sample-web-app/new_key.pem -r * ec2-user@54.198.115.205:/var/www/html/
                 '''
             }
         }

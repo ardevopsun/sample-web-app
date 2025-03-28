@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/ardevopsun/CI-CD-Pipeline-with-Jenkins-on-AWS.git'
+                git branch: 'main', url: 'https://github.com/ardevopsun/sample-web-app.git'
             }
         }
         stage('Build') {

@@ -29,7 +29,8 @@ pipeline {
                 sh '''
                  #scp -i /home/ec2-user/sample-web-app/new_key.pem -r * ec2-user@54.198.115.205:/var/www/html/
                  #sudo scp -i /home/ec2-user/sample-web-app/new_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r * ec2-user@54.198.115.205:/var/www/html/
-                 scp -i /home/ec2-user/sample-web-app/new_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r * ec2-user@54.198.115.205:/var/www/html/
+                 #scp -i /home/ec2-user/sample-web-app/new_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r * ec2-user@54.198.115.205:/var/www/html/
+                  scp -i /var/lib/jenkins/.ssh/new_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r * ec2-user@54.198.115.205:/var/www/html/
                    '''
             }
         }
